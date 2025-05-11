@@ -4,12 +4,13 @@ namespace ProjectConflict
 {
     public class Calculator
     {
-        public int Calculate(int a, int b)
+        public (int sum, int product) Calculate(int a, int b)
         {
-            // Branch1: menjumlahkan dan cetak hasil
-            int result = a + b;
-            Console.WriteLine($"Branch1: Hasil penjumlahan adalah {result}");
-            return result;
+            int sum = a + b;
+            int product = a * b;
+            Console.WriteLine($"Hasil penjumlahan: {sum}");
+            Console.WriteLine($"Hasil perkalian: {product}");
+            return (sum, product);
         }
     }
 }
